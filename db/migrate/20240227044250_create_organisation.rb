@@ -10,5 +10,7 @@ class CreateOrganisation < ActiveRecord::Migration[7.1]
 
       t.timestamps
     end
+
+    change_table_comment(:organisations, from: nil , to: 'Organisation table, primary table for its dependents')
   end
 end

@@ -42,7 +42,7 @@ ActiveRecord::Schema[7.1].define(version: 2024_02_27_044250) do
     t.index ["blob_id", "variation_digest"], name: "index_active_storage_variant_records_uniqueness", unique: true
   end
 
-  create_table "organisations", force: :cascade do |t|
+  create_table "organisations", comment: "Organisation table, primary table for its dependents", force: :cascade do |t|
     t.string "name", null: false
     t.string "avatar"
     t.string "tax_no"
