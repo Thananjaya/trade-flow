@@ -42,7 +42,7 @@ ActiveRecord::Schema[7.1].define(version: 2024_03_20_154029) do
     t.index ["blob_id", "variation_digest"], name: "index_active_storage_variant_records_uniqueness", unique: true
   end
 
-  create_table "administrators", force: :cascade do |t|
+  create_table "administrators", comment: "Trade Flow - administrator table", force: :cascade do |t|
     t.string "first_name", null: false
     t.string "last_name"
     t.string "phone", null: false

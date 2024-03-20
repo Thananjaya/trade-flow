@@ -9,5 +9,7 @@ class CreateAdministrators < ActiveRecord::Migration[7.1]
 
       t.timestamps
     end
+
+    change_table_comment(:administrators, from: nil, to: 'Trade Flow - administrator table')
   end
 end
